@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" binding="early" name="turbine-par" qt:editorversion="4.2.1" xmlns:qt="http://www.qt.io/2015/02/scxml-ext">
+    <parallel id="turbine">
+        <qt:editorinfo geometry="161.68;124.60;-105.53;-319.69;878.48;815.07" scenegeometry="161.68;124.60;56.15;-195.09;878.48;815.07"/>
+        <state id="turbine 1">
+            <qt:editorinfo geometry="31.92;41.20;-117.45;-271.98;425.35;677.07" scenegeometry="193.60;165.80;76.15;-106.18;425.35;677.07"/>
+            <state id="stop1">
+                <qt:editorinfo geometry="70.27;11.38;-60;-65.10;120;100" scenegeometry="263.87;177.18;203.87;112.08;120;100"/>
+                <transition type="external" event="doWarm1" target="warm1">
+                    <qt:editorinfo endTargetFactors="16.22;21.07" movePoint="-61.68;-8.22"/>
+                </transition>
+                <transition type="external" event="doCold1" target="cold1">
+                    <qt:editorinfo endTargetFactors="61.65;21.71"/>
+                </transition>
+                <onentry>
+                    <log expr="'enter state : stop1'"/>
+                </onentry>
+                <onexit>
+                    <log expr="'exit state : stop1'"/>
+                </onexit>
+            </state>
+            <state id="warm1">
+                <qt:editorinfo geometry="-17.45;213.17;-60;-50;120;100" scenegeometry="176.15;378.97;116.15;328.97;120;100"/>
+                <transition type="external" event="doStop1" target="stop1">
+                    <qt:editorinfo endTargetFactors="50.49;75.70"/>
+                </transition>
+                <transition type="external" event="doCold1" target="cold1">
+                    <qt:editorinfo endTargetFactors="22.34;24.07"/>
+                </transition>
+                <onentry>
+                    <log expr="'enter state : warm1'"/>
+                </onentry>
+                <onexit>
+                    <log expr="'exit state : warm1'"/>
+                </onexit>
+            </state>
+            <state id="cold1">
+                <qt:editorinfo geometry="157.90;217.91;-60;-50;120;100" scenegeometry="351.50;383.71;291.50;333.71;120;100"/>
+                <transition type="external" event="doStop1" target="stop1">
+                    <qt:editorinfo endTargetFactors="55.53;82.79"/>
+                </transition>
+                <transition type="external" event="doWarm1" target="warm1">
+                    <qt:editorinfo endTargetFactors="80.72;76.60"/>
+                </transition>
+                <onentry>
+                    <log expr="'enter state : cold1'"/>
+                </onentry>
+                <onexit>
+                    <log expr="'exit state : cold1'"/>
+                </onexit>
+            </state>
+        </state>
+        <state id="turbine 2">
+            <qt:editorinfo geometry="481.34;14.51;-97.45;-141.24;335.35;429.15" scenegeometry="643.02;139.11;545.57;-2.13;335.35;429.15"/>
+            <state id="stop2">
+                <qt:editorinfo geometry="70.27;11.38;-73.84;-65.10;147.67;100" scenegeometry="713.29;150.49;639.45;85.39;147.67;100"/>
+                <transition type="external" event="doWarm2" target="warm2">
+                    <qt:editorinfo endTargetFactors="16.22;21.07" movePoint="-61.68;-8.22"/>
+                </transition>
+                <transition type="external" event="doCold2" target="cold2">
+                    <qt:editorinfo endTargetFactors="61.65;21.71"/>
+                </transition>
+                <onentry>
+                    <log expr="'enter state : stop2'"/>
+                </onentry>
+                <onexit>
+                    <log expr="'exit state : stop2'"/>
+                </onexit>
+            </state>
+            <state id="warm2">
+                <qt:editorinfo geometry="-17.45;213.17;-60;-50;120;100" scenegeometry="206.15;408.97;146.15;358.97;120;100"/>
+                <transition type="external" event="doStop2" target="stop2">
+                    <qt:editorinfo endTargetFactors="50.49;75.70"/>
+                </transition>
+                <transition type="external" event="doCold2" target="cold2">
+                    <qt:editorinfo endTargetFactors="22.34;24.07"/>
+                </transition>
+                <onentry>
+                    <log expr="'enter state : warm2'"/>
+                </onentry>
+                <onexit>
+                    <log expr="'exit state : warm2'"/>
+                </onexit>
+            </state>
+            <state id="cold2">
+                <qt:editorinfo geometry="157.90;217.91;-60;-50;120;100" scenegeometry="381.50;413.71;321.50;363.71;120;100"/>
+                <transition type="external" event="doStop2" target="stop2">
+                    <qt:editorinfo endTargetFactors="55.53;82.79"/>
+                </transition>
+                <transition type="external" event="doWarm2" target="warm2">
+                    <qt:editorinfo endTargetFactors="80.72;76.60"/>
+                </transition>
+                <onentry>
+                    <log expr="'enter state : cold2'"/>
+                </onentry>
+                <onexit>
+                    <log expr="'exit state : cold2'"/>
+                </onexit>
+            </state>
+        </state>
+    </parallel>
+</scxml>

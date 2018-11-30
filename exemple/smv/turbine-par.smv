@@ -1,0 +1,20 @@
+MODULE main
+	VAR
+		proc1 : process user();
+		proc2 : process user();
+	SPEC AG ! (proc1.state = cold & proc2.state = warm)
+	
+MODULE user()
+	VAR
+		state : {stop, warm, cold};
+	ASSIGN
+		init(state) := stop;
+		next(state) :=
+			case
+				state = stop : {cold, warm};
+				state = warm : {cold, stop};
+				state = cold : {stop, warm};
+				TRUE : state;
+			esac;
+FAIRNESS
+	running

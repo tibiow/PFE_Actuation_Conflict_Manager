@@ -1,0 +1,22 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml"
+  version="1.0"
+  initial="start">
+
+  <state id="start">
+    <onentry>
+     <log expr="'start'" />
+   </onentry>
+   <transition event="e" target="stop" />
+
+ </state>
+
+
+  <state id="stop">
+    <onentry>
+     <log expr="'stop'" />
+   </onentry>
+   <transition event="e" target="start"/>
+
+ </state>
+
+</scxml>

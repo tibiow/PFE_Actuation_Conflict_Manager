@@ -1,0 +1,11 @@
+MODULE main
+	VAR
+		state : {ready, busy};
+	ASSIGN
+		init(state) := ready;
+		next(state) := 
+			case
+				state = ready : busy;
+				TRUE : {ready, busy};
+			esac;
+SPEC AG (state = ready -> AF state = busy)
