@@ -1,1 +1,1 @@
-[{"id":"9f1c8ddc.49e18","type":"comment","z":"41c4e244.a43f4c","name":"loadFSM","info":"","x":180,"y":460,"wires":[]}]
+[{"id":"ded8e9b8.899108","type":"inject","z":"41c4e244.a43f4c","name":"","topic":"","payload":"{\"action\":\"saveFSM\",\"data\":{\"name\":\"editor\"}}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":170,"y":360,"wires":[["bd354024.9bf2e"]]}]
