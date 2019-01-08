@@ -1,0 +1,6 @@
+http://localhost:1880/simulator/setLocalAddress?address=http://localhost:1880/
+http://localhost:1880/simulator/setStorageAddress?address=http://localhost:1880/
+http://localhost:1880/simulator/launchCompleteSimulation?urlEvents=events&urlFSM=exemple/scxml/turbine.scxml&logFile=simlog
+http://localhost:1880/modelCheck/setLocalAddress?address=http://localhost:1880/
+http://localhost:1880/modelCheck/setStorageAddress?address=http://localhost:1880/
+http://localhost:1880/modelCheck/launchTests?urlTest=modelChecktest&urlFSM=exemple/scxml/turbine.scxml&logFile=modelLog

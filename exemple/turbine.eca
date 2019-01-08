@@ -1,0 +1,4 @@
+ON  changeTemp IF (temperature<0) DO do_warm
+ON  changeTemp IF (temperature>0)&(temperature<30) DO do_stop
+ON  changeTemp IF (temperature>30) DO do_cold
+
